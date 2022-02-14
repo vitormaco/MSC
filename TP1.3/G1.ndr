@@ -1,15 +1,42 @@
-t 185.0 50.0 G1_allocate n 0 w n {} ne
-p 55.0 140.0 G1_Cl1_ack 0 n
-p 295.0 50.0 G1_available 1 n
-p 55.0 50.0 Cl1_G1_req 0 n
-t 295.0 145.0 G1_free s 0 w n {} ne
-p 185.0 145.0 G1_busy 0 s
-p 60.0 255.0 Cl1_G1_release 0 n
-e G1_free G1_available 1 n
-e G1_allocate G1_Cl1_ack 1 n
-e G1_busy G1_free 1 n
-e Cl1_G1_release G1_free 1 n
-e G1_allocate G1_busy 1 n
-e G1_available G1_allocate 1 n
-e Cl1_G1_req G1_allocate 1 n
+t 285.0 340.0 Cl2_G1_allocate e 0 w n {} ne
+t 170.0 340.0 Cl2_G1_free n 0 w n {} ne
+p 230.0 275.0 G1_available 1 n
+t 520.0 490.0 Cl2_req2 0 w n
+p 405.0 420.0 Cl2_G1_req2 0 n
+p 340.0 505.0 Cl2_G1_ack 0 n
+t 380.0 600.0 Cl2_enter 0 w n
+p 230.0 455.0 Cl2_G1_busy 0 n
+p 60.0 360.0 Cl2_G1_release 0 n
+t 45.0 490.0 Cl2_exit 0 w n
+t 595.0 65.0 Cl1_exit e 0 w n {} ne
+p 545.0 195.0 Cl1_G1_release 0 n
+t 435.0 195.0 Cl1_G1_free 0 w n
+t 225.0 170.0 Cl1_G1_allocate 0 w n
+p 360.0 110.0 Cl1_G1_busy 0 n
+p 65.0 230.0 Cl1_G1_req1 0 n
+t 45.0 100.0 Cl1_req1 n 0 w n {} ne
+t 240.0 25.0 Cl1_req2 0 w n
+p 135.0 80.0 Cl1_G1_ack 0 n
+e Cl2_exit Cl2_G1_release 1 n
+e Cl2_G1_free G1_available 1 n
+e Cl2_G1_release Cl2_G1_free 1 n
+e Cl2_G1_busy Cl2_G1_free 1 n
+e Cl2_G1_allocate Cl2_G1_ack 1 n
+e Cl2_G1_allocate Cl2_G1_busy 1 n
+e G1_available Cl2_G1_allocate 1 n
+e Cl2_G1_req2 Cl2_G1_allocate 1 n
+e Cl2_G1_ack Cl2_enter 1 n
+e Cl2_req2 Cl2_G1_req2 1 n
+e Cl1_exit Cl1_G1_release 1 n
+e Cl1_G1_free G1_available 1 n
+e Cl1_G1_release Cl1_G1_free 1 n
+e Cl1_G1_busy Cl1_G1_free 1 n
+e Cl1_G1_allocate Cl1_G1_ack 1 n
+e Cl1_G1_allocate Cl1_G1_busy 1 n
+e G1_available Cl1_G1_allocate 1 n
+e Cl1_G1_req1 Cl1_G1_allocate 1 n
+e Cl1_G1_ack Cl1_req2 1 n
+e Cl1_req1 Cl1_G1_req1 1 n
 h G1
+
+

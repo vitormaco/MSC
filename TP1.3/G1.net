@@ -1,0 +1,15 @@
+pl G1_available (1)
+
+# Cl1
+tr Cl1_req1 -> Cl1_G1_req1
+tr Cl1_req2 Cl1_G1_ack ->
+tr Cl1_G1_allocate G1_available Cl1_G1_req1 -> Cl1_G1_ack Cl1_G1_busy
+tr Cl1_G1_free Cl1_G1_release Cl1_G1_busy -> G1_available
+tr Cl1_exit -> Cl1_G1_release
+
+# Cl2
+tr Cl2_req2 -> Cl2_G1_req2
+tr Cl2_enter Cl2_G1_ack ->
+tr Cl2_G1_allocate G1_available Cl2_G1_req2 -> Cl2_G1_ack Cl2_G1_busy
+tr Cl2_G1_free Cl2_G1_release Cl2_G1_busy -> G1_available
+tr Cl2_exit -> Cl2_G1_release
