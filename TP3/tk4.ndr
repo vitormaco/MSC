@@ -1,0 +1,95 @@
+t 605.0 415.0 1_exit 0 w n
+t 425.0 565.0 2_work e 0 w n {} ne
+t 390.0 565.0 2_rel w 0 w n {} ne
+t 370.0 465.0 2_exit e 0 w n {} ne
+t 185.0 355.0 3_work s 0 w n {} ne
+t 305.0 275.0 3_exit 0 w n
+t 450.0 25.0 4_ask 0 w n
+t 505.0 130.0 4_work 0 w n
+t 450.0 125.0 4_rel 0 w n
+t 535.0 215.0 4_exit 0 w n
+t 480.0 495.0 2_entry 0 w n
+t 280.0 395.0 3_entry 0 w n
+t 410.0 210.0 4_entry 0 w n
+t 615.0 320.0 1_entry 0 w n
+p 645.0 355.0 token_1 1 n
+p 120.0 260.0 idle_3 1 n
+p 425.0 75.0 idle_4 1 n
+p 555.0 465.0 after_1 0 n
+p 315.0 445.0 after_2 0 n
+p 120.0 355.0 wait_3 0 n
+p 140.0 320.0 cs_3 0 n
+p 255.0 325.0 token_3 0 n
+p 350.0 230.0 after_3 0 n
+p 475.0 190.0 token_4 0 n
+p 585.0 260.0 after_4 0 n
+p 475.0 85.0 cs_4 0 n
+t 70.0 320.0 3_ask w 0 w n {} ne
+p 405.0 650.0 cs_2 0 n
+p 325.0 650.0 idle_2 1 n
+p 530.0 70.0 wait_4 0 n
+t 400.0 740.0 2_ask w 0 w n {} ne
+p 505.0 650.0 wait_2 0 n
+p 420.0 490.0 token_2 0 n
+t 185.0 280.0 3_rel n 0 w n {} ne
+t 725.0 360.0 1_work s 0 w n {} ne
+p 680.0 445.0 cs_1 0 n
+t 670.0 520.0 1_rel n 0 w n {} ne
+p 785.0 455.0 wait_1 0 n
+t 830.0 515.0 1_ask s 0 w n {} ne
+p 750.0 520.0 idle_1 1 n
+e 1_rel after_1 1 n
+e 3_rel after_3 1 n
+e 3_work 3_exit 1 n
+e 2_ask 0.5 110.0 2_exit 0.6389827415 137.0 1 n
+e wait_2 0.7354938835 186.775266 2_exit 0.6260976029 307.5987646 ?-1 n
+e 1_work 1_exit 1 n
+e idle_1 1_ask 1 n
+e 1_ask wait_1 1 n
+e token_1 1_work 1 n
+e wait_1 1_work 1 n
+e 1_work cs_1 1 n
+e cs_1 1_rel 1 n
+e 1_rel idle_1 1 n
+e token_1 1_exit 1 n
+e 1_exit after_1 1 n
+e idle_2 2_ask 1 n
+e 2_ask wait_2 1 n
+e token_2 2_work 1 n
+e wait_2 2_work 1 n
+e 2_work cs_2 1 n
+e cs_2 2_rel 1 n
+e 2_rel token_2 1 n
+e 2_rel idle_2 1 n
+e token_2 2_exit 1 n
+e 2_exit after_2 1 n
+e idle_3 3_ask 1 n
+e 3_ask wait_3 1 n
+e token_3 3_work 1 n
+e wait_3 3_work 1 n
+e 3_work cs_3 1 n
+e cs_3 3_rel 1 n
+e 3_rel idle_3 1 n
+e token_3 3_exit 1 n
+e 3_exit after_3 1 n
+e idle_4 4_ask 1 n
+e 4_ask wait_4 1 n
+e token_4 4_work 1 n
+e wait_4 4_work 1 n
+e 4_work cs_4 1 n
+e cs_4 4_rel 1 n
+e 4_rel token_4 1 n
+e 4_rel idle_4 1 n
+e token_4 4_exit 1 n
+e 4_exit after_4 1 n
+e after_1 2_entry 1 n
+e 2_entry token_2 1 n
+e after_2 3_entry 1 n
+e 3_entry token_3 1 n
+e after_3 4_entry 1 n
+e 4_entry token_4 1 n
+e after_4 1_entry 1 n
+e 1_entry token_1 1 n
+h tk4
+
+

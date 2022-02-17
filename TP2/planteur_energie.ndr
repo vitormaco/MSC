@@ -1,0 +1,32 @@
+p 410.0 50.0 bananier 20 n
+p 270.0 310.0 energie 11 n
+t 170.0 430.0 rentre 0 w n
+p 30.0 305.0 table 0 n
+t 125.0 170.0 dort 0 w n
+t 350.0 135.0 cueille 0 w n
+p 395.0 265.0 champ 1 n
+t 85.0 45.0 mange 0 w n
+p 225.0 105.0 banane 0 n
+t 135.0 310.0 leve 0 w n
+p 125.0 240.0 lit 0 n
+e mange table 1 n
+e mange bananier 1 n
+e mange energie 2 n
+e table mange 1 n
+e banane mange 1 n
+e cueille champ 1 n
+e cueille banane 1 n
+e energie cueille 1 n
+e champ cueille 1 n
+e bananier cueille 1 n
+e dort champ 1 n
+e lit dort 1 n
+e leve lit 1 n
+e table leve 1 n
+e energie leve 1 n
+e rentre table 1 n
+e energie rentre 5 n
+e champ rentre 1 n
+h planteur_energie
+
+

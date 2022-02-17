@@ -1,0 +1,64 @@
+t 1125.0 450.0 1_rel 0 w n
+t 310.0 695.0 2_exit 0 w n
+t 135.0 250.0 3_exit 0 w n
+t 705.0 135.0 4_exit 0 w n
+t 110.0 495.0 3_entry 0 w n
+t 390.0 110.0 4_entry 0 w n
+p 955.0 470.0 token_1 1 n
+p 450.0 790.0 token_2 0 n
+p 190.0 605.0 after_2 0 n
+p 55.0 355.0 token_3 0 n
+p 250.0 160.0 after_3 0 n
+p 560.0 65.0 token_4 0 n
+p 815.0 225.0 after_4 0 n
+t 955.0 335.0 1_entry 0 w n
+p 955.0 650.0 frozen_1 0 w
+t 1550.0 425.0 1_ask 0 w n
+p 1320.0 355.0 idle_1 1 n
+p 1405.0 515.0 wait_1 0 n
+p 1295.0 450.0 cs_1 0 n
+t 1125.0 515.0 1_work 0 w n
+t 615.0 765.0 2_entry s 0 w n {} ne
+p 760.0 765.0 after_1 0 n
+t 925.0 745.0 1_exit s 0 w n {} ne
+t 955.0 560.0 t3 0 w n
+p 1305.0 635.0 nbMax 4 se
+p 1130.0 640.0 nbMax_n 0 n
+t 1215.0 755.0 t1 0 w n
+e frozen_1 t1 ?1 n
+e idle_1 1_ask 1 n
+e 1_ask wait_1 1 n
+e token_1 1_work 1 n
+e wait_1 1_work 1 n
+e 1_work cs_1 1 n
+e cs_1 1_rel 1 n
+e 1_rel token_1 1 n
+e 1_rel idle_1 1 n
+e 1_exit after_1 1 n
+e token_2 2_exit 1 n
+e 2_exit after_2 1 n
+e token_3 3_exit 1 n
+e 3_exit after_3 1 n
+e token_4 4_exit 1 n
+e 4_exit after_4 1 n
+e after_1 2_entry 1 n
+e 2_entry token_2 1 n
+e after_2 3_entry 1 n
+e 3_entry token_3 1 n
+e after_3 4_entry 1 n
+e 4_entry token_4 1 n
+e after_4 1_entry 1 n
+e 1_entry token_1 1 n
+e nbMax 1_work 1 n
+e 1_entry 0.04797194791 531.8336839 nbMax 0.01410000661 637.3206445 4 n
+e frozen_1 1_exit 1 n
+e token_1 t3 1 n
+e t3 frozen_1 1 n
+e 1_work t3 1 n
+e nbMax t1 1 n
+e t1 nbMax_n 1 n
+e 1_work nbMax_n 1 n
+e nbMax_n 1_exit 4 n
+h puzzle large
+
+
